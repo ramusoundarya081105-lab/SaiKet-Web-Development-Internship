@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Contact Form</h2>
+
+      <form id="contactForm">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required />
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required />
+
+        <label>Gender</label>
+        <div class="options">
+          <label><input type="radio" name="gender" required /> Male</label>
+          <label><input type="radio" name="gender" /> Female</label>
+        </div>
+
+        <label>Choose Your Course</label>
+        <select required>
+          <option value="">Select Course</option>
+          <option>Web Development</option>
+          <option>Python</option>
+          <option>Java</option>
+        </select>
+
+        <label>Interests</label>
+        <div class="options">
+          <label><input type="checkbox" /> Frontend</label>
+          <label><input type="checkbox" /> Backend</label>
+        </div>
+
+        <label>Message</label>
+        <textarea placeholder="Enter your message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p id="success"></p>
+    </div>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          document.getElementById("success").textContent =
+            "Form submitted successfully!";
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

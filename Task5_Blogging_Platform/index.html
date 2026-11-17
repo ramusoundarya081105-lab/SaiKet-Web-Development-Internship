@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Blogging Platform</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navbar">
+        <h2 class="logo">MyBlog</h2>
+        <a href="#create-post" class="nav-btn"> Write a Blog </a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Welcome to MyBlog</h1>
+      <p>Share your thoughts, ideas, and stories with the world.</p>
+    </section>
+
+    <!-- Create Blog Section -->
+    <section class="blog-form-section" id="create-post">
+      <h2>Create a Blog Post</h2>
+
+      <form id="blogForm">
+        <!-- Blog Title -->
+        <label for="blogTitle">Blog Title</label>
+        <input
+          type="text"
+          id="blogTitle"
+          placeholder="Enter blog title"
+          required
+        />
+
+        <!-- Author Name -->
+        <label for="blogAuthor">Author Name</label>
+        <input
+          type="text"
+          id="blogAuthor"
+          placeholder="Enter your name"
+          required
+        />
+
+        <!-- Blog Category -->
+        <label for="blogCategory">Category</label>
+        <select id="blogCategory" required>
+          <option value="">Select Category</option>
+          <option value="Technology">Technology</option>
+          <option value="Education">Education</option>
+          <option value="Lifestyle">Lifestyle</option>
+          <option value="Travel">Travel</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <!-- Blog Content -->
+        <label for="blogContent">Blog Content</label>
+        <textarea
+          id="blogContent"
+          rows="7"
+          placeholder="Write your blog here..."
+          required
+        ></textarea>
+
+        <!-- Publish Button -->
+        <button type="submit" id="publishBtn">Publish Blog</button>
+
+        <button type="button" id="cancelEditBtn" style="display: none">
+          Cancel Edit
+        </button>
+      </form>
+    </section>
+
+    <!-- Published Blogs -->
+    <section class="blogs-section" id="blogs">
+      <h2>Published Blogs</h2>
+
+      <div id="blogContainer">
+        <!-- Blog posts will appear here -->
+      </div>
+
+      <p id="emptyMessage">No blogs published yet. Create your first blog!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 MyBlog. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

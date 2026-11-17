@@ -1,0 +1,228 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: #182b4a;
+  color: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+}
+
+.nav-btn {
+  background: #f59e0b;
+  color: #182b4a;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-btn:hover {
+  background: #fbbf24;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: #eaf2ff;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #182b4a;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #53647a;
+}
+
+/* Blog Form Section */
+.blog-form-section {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.blog-form-section h2 {
+  margin-bottom: 25px;
+  color: #182b4a;
+}
+
+#blogForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#blogForm label {
+  font-weight: bold;
+}
+
+#blogForm input,
+#blogForm select,
+#blogForm textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+#blogForm input:focus,
+#blogForm select:focus,
+#blogForm textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Publish Button */
+#publishBtn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#publishBtn:hover {
+  background: #1d4ed8;
+}
+
+/* Cancel Edit Button */
+#cancelEditBtn {
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Published Blogs Section */
+.blogs-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.blogs-section h2 {
+  color: #182b4a;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#blogContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Blog Cards */
+.blog-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  overflow-wrap: anywhere;
+}
+
+.blog-card h3 {
+  color: #182b4a;
+  margin-bottom: 10px;
+}
+
+.blog-meta {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.blog-content {
+  white-space: pre-wrap;
+  margin-bottom: 20px;
+}
+
+/* Blog Action Buttons */
+.blog-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.blog-actions button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #22c55e;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+/* Empty Message */
+#emptyMessage {
+  text-align: center;
+  color: #888;
+  margin: 30px 0;
+}
+
+/* Footer */
+footer {
+  background: #182b4a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .blog-form-section {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .blogs-section {
+    padding: 20px;
+  }
+}
